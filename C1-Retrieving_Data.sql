@@ -16,16 +16,19 @@ SELECT 'My Name is Karthik' AS Name FROM dual;
 SELECT 'I''m Karthik' AS Name FROM dual;
 SELECT q'[I'm Karthik]' AS Name FROM dual;
 
--- -- -- -- DISTINCT (OR) UNIQUE -- -- -- --
+-- -- -- -- DISTINCT OR UNIQUE -- -- -- --
 -- It is a row based operator.
 -- Only one distinct keyword can be used in a SQL statement and also before the first column.
+
 SELECT DISTINCT first_name FROM employees ORDER BY first_name DESC;
 
 -- -- -- -- CONCATENATION OPERATOR -- -- -- --
 -- Concatenates two or more strings or columns and returns a single output column value.
+  
 SELECT 'My first name is ' || first_name || ' and ' || 'my last name is ' || last_name || '.' FROM employees;
 
 -- Concatenation with a string and NULL returns the string.
+
 SELECT first_name || NULL  AS "string and null concatenation" FROM employees;
 
 -- -- -- -- ARITHEMATIC EXPRESSIONS -- -- -- --
